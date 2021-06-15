@@ -1,0 +1,15 @@
+.header {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  margin-bottom: 40px;
+
+  &-wrapper {
+    margin: 0 auto;
+    width: 900px;
+    max-width: 100%;
+    h2 {
+      margin-top: 0;
+    }
+  }
+}

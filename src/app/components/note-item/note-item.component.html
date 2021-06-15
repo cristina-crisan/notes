@@ -1,0 +1,6 @@
+<div class="note-item" [ngStyle]="{'background-color': note.color}" (click)="openModel(note)" >
+  <i class="pin"></i>
+  <p>{{note.title}}</p>
+  <p>{{note.description}}</p>
+  <p>Last edited: {{note.date | date:"short"}}</p>
+</div>

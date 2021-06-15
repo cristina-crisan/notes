@@ -1,0 +1,62 @@
+.open {
+  visibility: inherit;
+  opacity: 1;
+}
+
+section {
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    border-bottom: 1px solid red;
+
+    h3 {
+      margin-left: 10px;
+    }
+  }
+
+  .message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 250px;
+    width: 300px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .note-details {
+      color: black;
+      flex-grow: 1;
+      margin-left: 10px;
+    }
+  }
+}
+
+.note-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  margin: 10px;
+  i {
+    font-size: 18px;
+  }
+}

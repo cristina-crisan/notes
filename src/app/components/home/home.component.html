@@ -1,0 +1,12 @@
+<div class="home">
+  <app-toolbar [notes]="arrayOfNotes" (onSearch)="onSearch($event)"></app-toolbar>
+  <div class="home-notes">
+    <div *ngFor="let note of arrayOfNotes; let even = even; let odd = odd" class="note">
+      <app-note-item [ngClass]="{ even: even, odd: odd }" [note]="note"></app-note-item>
+    </div>
+  </div>
+</div>
+<div [ngClass]="arrayOfNotes.length > 0 ? 'add-button' : 'add-button-center'">
+  <button (click)="add()" type="button"><i class="fas fa-plus"></i></button>
+</div>
+<app-view-note (onDelete)="onDelete($event)"></app-view-note>

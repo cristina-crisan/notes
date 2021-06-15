@@ -1,0 +1,19 @@
+<div *ngIf="display$ | async as display">
+  <section [class.open]="display === true" (click)="close()">
+    <div class="message" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h3>{{note.title}}</h3>
+        <button type="button" (click)="close()"><i class="fas fa-times"></i></button>
+      </div>
+
+      <div class="note-details">
+        <p>{{note.description}}</p>
+      </div>
+
+      <div class="note-actions">
+        <button type="button" (click)="editPage(note)"><i class="far fa-edit"></i></button>
+        <button type="button" (click)="delete(note)"><i class="fas fa-trash-alt"></i></button>
+      </div>
+    </div>
+  </section>
+</div>

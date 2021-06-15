@@ -1,0 +1,9 @@
+<div class="dropdown" (mouseleave)="status=false">
+  <button type="button" (mouseover)="openDropdown()">Sort</button>
+  <div *ngIf="status" class="dropdown-content">
+    <a (click)="sortAlphabetical()" href="#">Alphabetical</a>
+    <a (click)="sortByDateAsc()" href="#">Date ascending</a>
+    <a (click)="sortByDateDesc()" href="#">Date descending</a>
+  </div>
+</div>
+<input type="text" [(ngModel)]="inputValue" placeholder="Search by title" (keyup)="search()" />

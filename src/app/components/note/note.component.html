@@ -1,0 +1,18 @@
+<form #form="ngForm" class="note" (ngSubmit)="form.valid && save()">
+  <div>
+    <label>Title:</label>
+    <input type="text" name="title" [(ngModel)]="note.title" required />
+  </div>
+  <div>
+    <label>Description:</label>
+    <textarea name="description" [(ngModel)]="note.description" rows="4"></textarea>
+  </div>
+  <div>
+    <label>Color: </label>
+    <input type="color" name="color" [(ngModel)]="note.color">
+  </div>
+  <div class="note-actions">
+    <button type="button" class="default" (click)="cancel()">Cancel</button>
+    <button class="primary" type="submit">Save</button>
+  </div>
+</form>
