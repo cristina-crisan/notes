@@ -13,7 +13,11 @@ export class LocalStorageService {
   }
 
   get(key: string ) {
-    return JSON.parse(localStorage.getItem(key) || '') || [];
+    if(localStorage[key]) {
+      return JSON.parse(localStorage.getItem(key) || "");
+    } else {
+      return [];
+    }
   }
 }
  
